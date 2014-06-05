@@ -1,3 +1,4 @@
+Same as https://github.com/duckbox/grunt-ng-template expect that it uses absolution filenames inside of the IDs to play nice the HTML5 History :-).
 # grunt-ng-template
 
 > A Grunt plugin to take external angular templates and put them inline to the main app file.

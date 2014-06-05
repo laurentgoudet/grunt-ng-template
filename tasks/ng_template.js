@@ -59,11 +59,10 @@ module.exports = function (grunt) {
                 function processTemplate(abspath, filename) {
                     if (filename.indexOf('.html') > -1) {
 
-                            grunt.log.ok(configs.PATH.resolve(abspath).replace(configs.appDir_path, '').replace(/^\//, ''));
+                            grunt.log.ok(configs.PATH.resolve(abspath).replace(configs.appDir_path, ''));
 
                             var _filename = configs.PATH.resolve(abspath).replace(configs.appDir_path, '')
-                            		.replace(/\\/g, '/')
-                            		.replace(/^\//, ''),
+                            		.replace(/\\/g, '/'),
                                 content = grunt.file.read(configs.PATH.resolve(abspath)),
                                 parsed = configs.TEMPLATE.replace('<% filename %>', _filename).replace('<% content %>', content);
 
